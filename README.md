@@ -24,8 +24,8 @@ sh start-slave.sh spark://<SPARK_MASTER_URL>:7077
 # Prerequisite
 Spark Master and slave processes are running on either same or any network devices. Provide the URL where spark master process is running. Also change the highlighted program arguments to match the actual path in test machine.
 
-#Run Command
-Format: 
+# Run Command
+Format:
 spark-submit --class com.sample.matcher.app.Main --master  spark://<SPARK_MASTER_URL>:7077 --deploy-mode cluster 
 --supervise company-matcher-1.0.0-jar-with-dependencies.jar  <COMPAY_DATA_FILE_WITH_PATH>   <USER_REQUEST_FILE_WITH_PATH>  <THREASOLD>  <OUTPUT_DIRECTORY_PATH>
 
@@ -33,6 +33,8 @@ Sample:
 spark-submit --class com.sample.matcher.app.Main --master spark://<spark_master_url>:7077 --deploy-mode cluster --supervise 
 company-matcher-1.0.0-jar-with-dependencies.jar /apps/example/companies.csv /apps/example/sample_user_records.csv 1 /apps/example /output/matched_records_1
 
-#Execution:
+# Execution
 Once spark job is submitted, the processing will be done asynchronously and data file will be prepared and stored at provided location.
 
+#Limitation
+The limitation of this solution is, it does not provide status of the user submitted requests. The status of spark submitted process could be monitored via spark Spark web UI page.
