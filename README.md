@@ -38,3 +38,6 @@ Once spark job is submitted, the processing will be done asynchronously and data
 
 #Limitation
 The limitation of this solution is, it does not provide status of the user submitted requests. The status of spark submitted process could be monitored via spark Spark web UI page.
+
+#Sample Output file
+Please refer to sample_output_file.csv for generated outfile file
