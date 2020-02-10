@@ -7,11 +7,12 @@ Jakkard Index threshold.
 The solution uses the big data processing ability of spark to process the submitted user records file against the large data of companies. For this prototype, data is available in companies.csv, however in actual application data could be either from file or database.
 
 # Build
-The project follows is maven based structure and requires maven and JDK 1.8 (or any higher version) to build and package the binary (jar) - company-matcher-1.0.0-jar-with-dependencies.jar 
-Step1) Checkout from URL https://github.com/saiyedriyaz/company-matcher.git 
-Step 2) run command “mvn clean install”
+The project follows is maven based structure and requires maven and JDK 1.8 (or any higher version) to build and package the binary (jar). Generated jar name: "company-matcher-1.0.0-jar-with-dependencies.jar"
 
-# Set Up
+Checkout from URL https://github.com/saiyedriyaz/company-matcher.git 
+Build the code: run command “mvn clean install”
+
+# Set Up Execution Environment
 In order to run the company-matcher application, spark libraries are required to be available in class path. 
 Set up path: change the below highlighted path to match the actual path where program is going to run
 export PATH=/apps/tools/jdk1.8.0_66/bin:$PATH
